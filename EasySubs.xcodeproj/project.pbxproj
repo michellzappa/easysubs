@@ -1,0 +1,460 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0E0672F4D65EED2CC1AF7108 /* OpenSubtitlesCodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB11CFC97EE63BC76B25BCE /* OpenSubtitlesCodingTests.swift */; };
+		1134AB66027027B0E97F4DD5 /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB06AE5ABEB6853BF3AA6E3 /* SettingsStore.swift */; };
+		172D3FEBD38C16FD1C5AC002 /* OpenSubtitlesHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12897D10974503381364A15B /* OpenSubtitlesHash.swift */; };
+		42890F09A10F8DB301D1A595 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7C2BC6DEDC9AAAB386BE31E /* Assets.xcassets */; };
+		5C48C6F588DD4F779BE91534 /* OpenSubtitlesHashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7D32412D838EFA0B5A732F /* OpenSubtitlesHashTests.swift */; };
+		6EB31725930CEE60DA7C3306 /* OpenSubtitlesClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B10064429E1EC33EFE6425 /* OpenSubtitlesClient.swift */; };
+		B643227E397EC19C2E4C97C2 /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDE1704AF7066E7892FB84D /* KeychainStore.swift */; };
+		C368941C71CCF9B56572C072 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC9ACFB6C26C163B458C5B1 /* ContentView.swift */; };
+		C533534C1CFC71636F10E27D /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CA343EC48AA122A8119E86 /* AppState.swift */; };
+		CF5C6654D6B109B743BB5740 /* EasySubsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3233FAFE1C826218C99D39C /* EasySubsApp.swift */; };
+		D9EFB1633D42131A44C11821 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F30A1BC6AA8A1F568D1792 /* Models.swift */; };
+		E67E51066D592423D4F5F94E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A50B6EF2EBD54808BC59C69 /* SettingsView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F959FCCBC453C4A10DB52ED0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A46538BFA894E803F37D8E63 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 167BC6F3009ACED2CCC89F0E;
+			remoteInfo = EasySubs;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		12897D10974503381364A15B /* OpenSubtitlesHash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSubtitlesHash.swift; sourceTree = "<group>"; };
+		3332D92D01843955F2BBA58E /* EasySubs.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EasySubs.entitlements; sourceTree = "<group>"; };
+		3FDE1704AF7066E7892FB84D /* KeychainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStore.swift; sourceTree = "<group>"; };
+		4A50B6EF2EBD54808BC59C69 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		62B10064429E1EC33EFE6425 /* OpenSubtitlesClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSubtitlesClient.swift; sourceTree = "<group>"; };
+		7162AED2097F8062C939EC83 /* EasySubsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasySubsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B7D32412D838EFA0B5A732F /* OpenSubtitlesHashTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSubtitlesHashTests.swift; sourceTree = "<group>"; };
+		88CA343EC48AA122A8119E86 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		8BB11CFC97EE63BC76B25BCE /* OpenSubtitlesCodingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSubtitlesCodingTests.swift; sourceTree = "<group>"; };
+		92F30A1BC6AA8A1F568D1792 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		B660606C628C017FC69A1E3C /* EasySubs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasySubs.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3233FAFE1C826218C99D39C /* EasySubsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasySubsApp.swift; sourceTree = "<group>"; };
+		DBC9ACFB6C26C163B458C5B1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DDB06AE5ABEB6853BF3AA6E3 /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
+		F7C2BC6DEDC9AAAB386BE31E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		0B3785E4DF9CE1BCBFA0FD74 /* EasySubsTests */ = {
+			isa = PBXGroup;
+			children = (
+				8BB11CFC97EE63BC76B25BCE /* OpenSubtitlesCodingTests.swift */,
+				7B7D32412D838EFA0B5A732F /* OpenSubtitlesHashTests.swift */,
+			);
+			path = EasySubsTests;
+			sourceTree = "<group>";
+		};
+		489370255FAF3FB3C26FC0C7 /* EasySubs */ = {
+			isa = PBXGroup;
+			children = (
+				88CA343EC48AA122A8119E86 /* AppState.swift */,
+				DBC9ACFB6C26C163B458C5B1 /* ContentView.swift */,
+				3332D92D01843955F2BBA58E /* EasySubs.entitlements */,
+				C3233FAFE1C826218C99D39C /* EasySubsApp.swift */,
+				3FDE1704AF7066E7892FB84D /* KeychainStore.swift */,
+				92F30A1BC6AA8A1F568D1792 /* Models.swift */,
+				62B10064429E1EC33EFE6425 /* OpenSubtitlesClient.swift */,
+				12897D10974503381364A15B /* OpenSubtitlesHash.swift */,
+				DDB06AE5ABEB6853BF3AA6E3 /* SettingsStore.swift */,
+				4A50B6EF2EBD54808BC59C69 /* SettingsView.swift */,
+				E638CCA8660D3CC0612B9FA9 /* Resources */,
+			);
+			path = EasySubs;
+			sourceTree = "<group>";
+		};
+		528312FD836275DAB7926267 = {
+			isa = PBXGroup;
+			children = (
+				489370255FAF3FB3C26FC0C7 /* EasySubs */,
+				0B3785E4DF9CE1BCBFA0FD74 /* EasySubsTests */,
+				B054ACEBEC20849DDAB0F9D7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B054ACEBEC20849DDAB0F9D7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B660606C628C017FC69A1E3C /* EasySubs.app */,
+				7162AED2097F8062C939EC83 /* EasySubsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E638CCA8660D3CC0612B9FA9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F7C2BC6DEDC9AAAB386BE31E /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		167BC6F3009ACED2CCC89F0E /* EasySubs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3834175241641831CC297C14 /* Build configuration list for PBXNativeTarget "EasySubs" */;
+			buildPhases = (
+				55961ED61A8F9CFAD7C3276F /* Sources */,
+				BD122A7A396B40FB99F60D38 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EasySubs;
+			packageProductDependencies = (
+			);
+			productName = EasySubs;
+			productReference = B660606C628C017FC69A1E3C /* EasySubs.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5F9247F5CBACCED76D273B17 /* EasySubsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80C90D66E6272C8D1E1B2620 /* Build configuration list for PBXNativeTarget "EasySubsTests" */;
+			buildPhases = (
+				EF74AA1DC98CC47ADEF8FE22 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A7C068BF9D6A94F68E5A80BE /* PBXTargetDependency */,
+			);
+			name = EasySubsTests;
+			packageProductDependencies = (
+			);
+			productName = EasySubsTests;
+			productReference = 7162AED2097F8062C939EC83 /* EasySubsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A46538BFA894E803F37D8E63 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					167BC6F3009ACED2CCC89F0E = {
+						DevelopmentTeam = "";
+					};
+					5F9247F5CBACCED76D273B17 = {
+						DevelopmentTeam = "";
+					};
+				};
+			};
+			buildConfigurationList = 1520C016C62D134E95C04D44 /* Build configuration list for PBXProject "EasySubs" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 528312FD836275DAB7926267;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = B054ACEBEC20849DDAB0F9D7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				167BC6F3009ACED2CCC89F0E /* EasySubs */,
+				5F9247F5CBACCED76D273B17 /* EasySubsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BD122A7A396B40FB99F60D38 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42890F09A10F8DB301D1A595 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		55961ED61A8F9CFAD7C3276F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C533534C1CFC71636F10E27D /* AppState.swift in Sources */,
+				C368941C71CCF9B56572C072 /* ContentView.swift in Sources */,
+				CF5C6654D6B109B743BB5740 /* EasySubsApp.swift in Sources */,
+				B643227E397EC19C2E4C97C2 /* KeychainStore.swift in Sources */,
+				D9EFB1633D42131A44C11821 /* Models.swift in Sources */,
+				6EB31725930CEE60DA7C3306 /* OpenSubtitlesClient.swift in Sources */,
+				172D3FEBD38C16FD1C5AC002 /* OpenSubtitlesHash.swift in Sources */,
+				1134AB66027027B0E97F4DD5 /* SettingsStore.swift in Sources */,
+				E67E51066D592423D4F5F94E /* SettingsView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF74AA1DC98CC47ADEF8FE22 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E0672F4D65EED2CC1AF7108 /* OpenSubtitlesCodingTests.swift in Sources */,
+				5C48C6F588DD4F779BE91534 /* OpenSubtitlesHashTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A7C068BF9D6A94F68E5A80BE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 167BC6F3009ACED2CCC89F0E /* EasySubs */;
+			targetProxy = F959FCCBC453C4A10DB52ED0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		12BB112A5F5D66C73FB83C22 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.10;
+			};
+			name = Debug;
+		};
+		268619984804F12F1CEEFECA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.10;
+			};
+			name = Release;
+		};
+		4317999B0DBAE41E387A270F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = app.easysubs.mac.tests;
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EasySubs.app/Contents/MacOS/EasySubs";
+			};
+			name = Release;
+		};
+		CFB575D71E75873F49C6172D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = EasySubs/EasySubs.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = EasySubs;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = app.easysubs.mac;
+				PRODUCT_NAME = EasySubs;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		D5CBA7DC525D80AECC77F3F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = EasySubs/EasySubs.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = EasySubs;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = app.easysubs.mac;
+				PRODUCT_NAME = EasySubs;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		E7714B4EEC0641B733A6F81E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = app.easysubs.mac.tests;
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EasySubs.app/Contents/MacOS/EasySubs";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1520C016C62D134E95C04D44 /* Build configuration list for PBXProject "EasySubs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				12BB112A5F5D66C73FB83C22 /* Debug */,
+				268619984804F12F1CEEFECA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		3834175241641831CC297C14 /* Build configuration list for PBXNativeTarget "EasySubs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D5CBA7DC525D80AECC77F3F2 /* Debug */,
+				CFB575D71E75873F49C6172D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		80C90D66E6272C8D1E1B2620 /* Build configuration list for PBXNativeTarget "EasySubsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7714B4EEC0641B733A6F81E /* Debug */,
+				4317999B0DBAE41E387A270F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A46538BFA894E803F37D8E63 /* Project object */;
+}

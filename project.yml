@@ -1,0 +1,42 @@
+name: EasySubs
+options:
+  bundleIdPrefix: com.local
+  deploymentTarget:
+    macOS: "14.0"
+  xcodeVersion: "16.0"
+  minimumXcodeGenVersion: "2.30.0"
+
+settings:
+  base:
+    SWIFT_VERSION: "5.10"
+    DEVELOPMENT_TEAM: ""
+    MACOSX_DEPLOYMENT_TARGET: "14.0"
+
+targets:
+  EasySubs:
+    type: application
+    platform: macOS
+    sources:
+      - path: EasySubs
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: app.easysubs.mac
+        PRODUCT_NAME: EasySubs
+        GENERATE_INFOPLIST_FILE: true
+        INFOPLIST_KEY_CFBundleDisplayName: EasySubs
+        INFOPLIST_KEY_LSApplicationCategoryType: public.app-category.utilities
+        INFOPLIST_KEY_NSPrincipalClass: NSApplication
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ENABLE_HARDENED_RUNTIME: true
+        CODE_SIGN_ENTITLEMENTS: EasySubs/EasySubs.entitlements
+  EasySubsTests:
+    type: bundle.unit-test
+    platform: macOS
+    sources:
+      - path: EasySubsTests
+    dependencies:
+      - target: EasySubs
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: app.easysubs.mac.tests
+        GENERATE_INFOPLIST_FILE: true
