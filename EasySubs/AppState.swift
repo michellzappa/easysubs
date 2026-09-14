@@ -1,4 +1,5 @@
 import AppKit
+import EasySubsKit
 import Foundation
 import UniformTypeIdentifiers
 

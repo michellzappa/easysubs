@@ -1,13 +1,13 @@
 import Foundation
 
-enum OpenSubtitlesError: LocalizedError {
+public enum OpenSubtitlesError: LocalizedError, Sendable {
     case invalidResponse
     case decoding(stage: String, detail: String)
     case api(status: Int, message: String)
     case noMatch
     case invalidDownload
 
-    var errorDescription: String? {
+    public var errorDescription: String? {
         switch self {
         case .invalidResponse:
             "OpenSubtitles returned an unreadable response."
@@ -23,14 +23,18 @@ enum OpenSubtitlesError: LocalizedError {
     }
 }
 
-actor OpenSubtitlesClient {
+public actor OpenSubtitlesClient {
+    public init(userAgent: String = "EasySubs v1.0") {
+        self.userAgent = userAgent
+    }
+
     private let defaultBaseURL = URL(string: "https://api.opensubtitles.com/api/v1")!
-    private let userAgent = "EasySubs v1.0"
+    private let userAgent: String
     private var sessionToken: String?
     private var sessionBaseURL: URL?
     private var authenticatedCredentials: OpenSubtitlesCredentials?
 
-    func findBestSubtitle(
+    public func findBestSubtitle(
         for videoURL: URL,
         language: String,
         credentials: OpenSubtitlesCredentials,
@@ -73,7 +77,7 @@ actor OpenSubtitlesClient {
         return result
     }
 
-    func download(
+    public func download(
         match: SubtitleMatch,
         credentials: OpenSubtitlesCredentials
     ) async throws -> Data {

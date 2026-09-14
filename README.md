@@ -18,6 +18,13 @@ The current OpenSubtitles REST API requires credentials that the older service d
 
 The password is stored in macOS Keychain. The API key, username, language, and replacement preference are stored in the app's local preferences.
 
+## Package
+
+The engine — hashing, OpenSubtitles search and download — is `EasySubsKit`,
+a Swift package at the repo root (`swift build && swift test`). The drop app
+is a thin UI over it, and [Cargo](https://github.com/michellzappa/cargo) uses
+the same package to fetch subtitles after it organizes a file.
+
 ## Build
 
 The checked-in Xcode project can be opened directly:

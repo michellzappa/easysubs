@@ -1,10 +1,10 @@
 import Foundation
 
-enum OpenSubtitlesHashError: LocalizedError {
+public enum OpenSubtitlesHashError: LocalizedError {
     case fileTooSmall
     case unreadable
 
-    var errorDescription: String? {
+    public var errorDescription: String? {
         switch self {
         case .fileTooSmall: "The video is too small for hash matching."
         case .unreadable: "The video could not be read."
@@ -12,10 +12,10 @@ enum OpenSubtitlesHashError: LocalizedError {
     }
 }
 
-enum OpenSubtitlesHash {
+public enum OpenSubtitlesHash {
     static let chunkSize = 64 * 1024
 
-    static func calculate(for url: URL) throws -> (hash: String, byteSize: UInt64) {
+    public static func calculate(for url: URL) throws -> (hash: String, byteSize: UInt64) {
         let handle = try FileHandle(forReadingFrom: url)
         defer { try? handle.close() }
 

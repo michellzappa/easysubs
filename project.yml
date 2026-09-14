@@ -6,6 +6,9 @@ options:
   xcodeVersion: "16.0"
   minimumXcodeGenVersion: "2.30.0"
 
+packages:
+  EasySubsKit:
+    path: .
 settings:
   base:
     SWIFT_VERSION: "5.10"
@@ -18,6 +21,9 @@ targets:
     platform: macOS
     sources:
       - path: EasySubs
+    dependencies:
+      - package: EasySubsKit
+        product: EasySubsKit
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: app.easysubs.mac
@@ -29,14 +35,3 @@ targets:
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
         ENABLE_HARDENED_RUNTIME: true
         CODE_SIGN_ENTITLEMENTS: EasySubs/EasySubs.entitlements
-  EasySubsTests:
-    type: bundle.unit-test
-    platform: macOS
-    sources:
-      - path: EasySubsTests
-    dependencies:
-      - target: EasySubs
-    settings:
-      base:
-        PRODUCT_BUNDLE_IDENTIFIER: app.easysubs.mac.tests
-        GENERATE_INFOPLIST_FILE: true

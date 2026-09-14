@@ -1,5 +1,5 @@
 import XCTest
-@testable import EasySubs
+@testable import EasySubsKit
 
 final class OpenSubtitlesHashTests: XCTestCase {
     func testHashUsesSizeAndLittleEndianWordsFromBothEnds() throws {

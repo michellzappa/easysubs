@@ -1,3 +1,4 @@
+import EasySubsKit
 import SwiftUI
 
 struct SettingsView: View {
