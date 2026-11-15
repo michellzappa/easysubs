@@ -1,37 +1,71 @@
-name: EasySubs
+name: Subs
 options:
-  bundleIdPrefix: com.local
+  bundleIdPrefix: app.subs
   deploymentTarget:
     macOS: "14.0"
-  xcodeVersion: "16.0"
-  minimumXcodeGenVersion: "2.30.0"
-
+  createIntermediateGroups: true
+  groupSortPosition: top
+configs:
+  Debug: debug
+  Release: release
 packages:
+  HouseKit:
+    path: ../housekit
+  # The subtitle engine, a Swift package at this repo's root. Cargo uses it too.
   EasySubsKit:
     path: .
 settings:
   base:
-    SWIFT_VERSION: "5.10"
-    DEVELOPMENT_TEAM: ""
+    SWIFT_VERSION: "6.0"
     MACOSX_DEPLOYMENT_TARGET: "14.0"
-
+    # Keychain keys its access grant to the code signature, so an ad-hoc build
+    # asks for the OpenSubtitles password again after every rebuild. Sign with
+    # the stable Apple Development identity.
+    CODE_SIGN_STYLE: Manual
+    CODE_SIGN_IDENTITY: Apple Development
+    DEVELOPMENT_TEAM: 992N457T8D
+    PROVISIONING_PROFILE_SPECIFIER: ""
+    ENABLE_HARDENED_RUNTIME: YES
+    GENERATE_INFOPLIST_FILE: NO
+    SWIFT_STRICT_CONCURRENCY: complete
+  configs:
+    Debug:
+      SWIFT_ACTIVE_COMPILATION_CONDITIONS: DEBUG
+      SWIFT_OPTIMIZATION_LEVEL: "-Onone"
+    Release:
+      SWIFT_OPTIMIZATION_LEVEL: "-O"
 targets:
-  EasySubs:
+  Subs:
     type: application
     platform: macOS
     sources:
-      - path: EasySubs
+      - path: Subs
+        excludes:
+          - "Resources/Info.plist"
+          - "Resources/Subs.entitlements"
+      - path: CHANGELOG.md
+        buildPhase: resources
     dependencies:
+      - package: HouseKit
+        product: HouseKit
       - package: EasySubsKit
         product: EasySubsKit
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: app.easysubs.mac
-        PRODUCT_NAME: EasySubs
-        GENERATE_INFOPLIST_FILE: true
-        INFOPLIST_KEY_CFBundleDisplayName: EasySubs
-        INFOPLIST_KEY_LSApplicationCategoryType: public.app-category.utilities
-        INFOPLIST_KEY_NSPrincipalClass: NSApplication
-        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
-        ENABLE_HARDENED_RUNTIME: true
-        CODE_SIGN_ENTITLEMENTS: EasySubs/EasySubs.entitlements
+        PRODUCT_BUNDLE_IDENTIFIER: app.subs.Subs
+        PRODUCT_NAME: Subs
+        CODE_SIGN_ENTITLEMENTS: Subs/Resources/Subs.entitlements
+        INFOPLIST_FILE: Subs/Resources/Info.plist
+        ASSETCATALOG_COMPILER_APPICON_NAME: ""
+        COMBINE_HIDPI_IMAGES: YES
+schemes:
+  Subs:
+    build:
+      targets:
+        Subs: all
+    run:
+      config: Debug
+    profile:
+      config: Release
+    archive:
+      config: Release
