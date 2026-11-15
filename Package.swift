@@ -2,7 +2,7 @@
 
 import PackageDescription
 
-// The subtitle engine behind the EasySubs drop app, as a library so Cargo can
+// The subtitle engine behind the Subs menu-bar app, as a library so Cargo can
 // fetch subtitles after it organizes a file. The app target lives in project.yml.
 let package = Package(
     name: "EasySubsKit",

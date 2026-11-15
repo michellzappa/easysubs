@@ -3,15 +3,19 @@ import EasySubsKit
 import Foundation
 import UniformTypeIdentifiers
 
+/// Dropped videos in, `.srt` files out beside them, one video at a time.
 @MainActor
-final class AppState: ObservableObject {
+final class SubtitleQueue: ObservableObject {
     @Published private(set) var jobs: [SubtitleJob] = []
     @Published private(set) var isProcessing = false
-    @Published var wantsSetup = false
+
+    /// Called when a drop arrives before OpenSubtitles is set up.
+    var onNeedsSetup: (() -> Void)?
 
     private let settings: SettingsStore
     private let client = OpenSubtitlesClient()
-    private let videoExtensions: Set<String> = [
+
+    static let videoExtensions: Set<String> = [
         "3gp", "avi", "flv", "m2ts", "m4v", "mkv", "mov", "mp4", "mpeg", "mpg", "mts", "ogm", "ts", "webm", "wmv"
     ]
 
@@ -19,16 +23,21 @@ final class AppState: ObservableObject {
         self.settings = settings
     }
 
+    static func videos(in urls: [URL]) -> [URL] {
+        urls.filter { videoExtensions.contains($0.pathExtension.lowercased()) }
+    }
+
+    /// Queues the videos among `urls`. False when there is none.
+    @discardableResult
     func accept(_ urls: [URL]) -> Bool {
-        let videos = urls.filter { videoExtensions.contains($0.pathExtension.lowercased()) }
+        let videos = Self.videos(in: urls)
         guard !videos.isEmpty else { return false }
         guard settings.isConfigured else {
-            wantsSetup = true
+            onNeedsSetup?()
             return true
         }
 
-        let additions = videos.map { SubtitleJob(videoURL: $0) }
-        jobs.insert(contentsOf: additions, at: 0)
+        jobs.insert(contentsOf: videos.map { SubtitleJob(videoURL: $0) }, at: 0)
         processQueueIfNeeded()
         return true
     }
@@ -39,8 +48,9 @@ final class AppState: ObservableObject {
         panel.prompt = "Find Subtitles"
         panel.allowsMultipleSelection = true
         panel.canChooseDirectories = false
-        panel.allowedContentTypes = videoExtensions.compactMap { UTType(filenameExtension: $0) }
-        if panel.runModal() == .OK { _ = accept(panel.urls) }
+        panel.allowedContentTypes = Self.videoExtensions.compactMap { UTType(filenameExtension: $0) }
+        NSApp.activate(ignoringOtherApps: true)
+        if panel.runModal() == .OK { accept(panel.urls) }
     }
 
     func reveal(_ url: URL) {

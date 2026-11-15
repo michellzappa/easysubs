@@ -1,10 +1,11 @@
 import Foundation
 import Security
 
+/// Generic passwords under the app's bundle id.
 enum KeychainStore {
-    private static let service = "app.easysubs.mac"
+    static let service = "app.subs.Subs"
 
-    static func read(account: String) -> String {
+    static func read(account: String, service: String = service) -> String {
         let query: [String: Any] = [
             kSecClass as String: kSecClassGenericPassword,
             kSecAttrService as String: service,
@@ -19,7 +20,7 @@ enum KeychainStore {
         return value
     }
 
-    static func write(_ value: String, account: String) {
+    static func write(_ value: String, account: String, service: String = service) {
         let identity: [String: Any] = [
             kSecClass as String: kSecClassGenericPassword,
             kSecAttrService as String: service,
