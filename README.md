@@ -26,8 +26,8 @@ the Keychain password.
 ./scripts/build-app.sh      # → /Applications/Subs.app, signed, icon regenerated
 ```
 
-Needs `xcodegen` and the sibling [`../housekit`](https://github.com/michellzappa/housekit)
-package, which supplies the menu bar plate, the app icon, the settings window
+Needs `xcodegen`. [HouseKit](https://github.com/michellzappa/housekit), pinned to a
+release tag in `project.yml`, supplies the menu bar plate, the app icon, the settings window
 and launch at login: the pieces Subs shares with Clip, Tessellate and Cargo.
 To work in Xcode instead: `xcodegen generate && open Subs.xcodeproj`.
 
