@@ -1,16 +1,19 @@
 import AppKit
 import Combine
 import HouseKit
+import HouseKitSparkle
 
 @main
 @MainActor
 final class SubsAppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate, NSWindowDelegate, NSDraggingDestination {
     private let settings = SettingsStore()
     private lazy var queue = SubtitleQueue(settings: settings)
-    private lazy var settingsWindowController = HouseSettingsWindowController.subs(settings: settings)
+    private lazy var settingsWindowController = HouseSettingsWindowController.subs(settings: settings, updates: updates)
     private lazy var dropWindowController = DropWindowController(queue: queue, settings: settings) { [weak self] in
         self?.showOpenSubtitlesSettings()
     }
+    /// Sparkle. Feed and key come from Info.plist (housekit docs/releasing.md).
+    private let updates = SparkleUpdater(appName: "Subs")
     private var statusItem: NSStatusItem!
     private var statusMenu: NSMenu!
     private var cancellables = Set<AnyCancellable>()
@@ -157,7 +160,8 @@ final class SubsAppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate, NS
             settings: #selector(showSettings(_:)),
             launchAtLogin: #selector(toggleLaunchAtLogin(_:)),
             launchAtLoginEnabled: LaunchAtLogin.isRequested,
-            quit: #selector(quit(_:))
+            quit: #selector(quit(_:)),
+            updates: updates
         )
     }
 

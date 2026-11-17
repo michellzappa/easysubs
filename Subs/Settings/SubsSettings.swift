@@ -6,9 +6,9 @@ extension HouseSettingsWindowController {
     static let openSubtitlesPaneID = "opensubtitles"
 
     /// General · Subtitles · OpenSubtitles · About, the house order.
-    static func subs(settings: SettingsStore) -> HouseSettingsWindowController {
+    static func subs(settings: SettingsStore, updates: any UpdateChecking) -> HouseSettingsWindowController {
         HouseSettingsWindowController(appName: "Subs", panes: [
-            .general { GeneralSettingsPane() },
+            .general { GeneralSettingsPane(updates: updates) },
             SettingsPane(id: "subtitles", title: "Subtitles", symbol: "captions.bubble") {
                 SubtitlesPane(settings: settings)
             },
