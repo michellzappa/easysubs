@@ -25,7 +25,7 @@ settings:
     CURRENT_PROJECT_VERSION: "1"
     # Sparkle's EdDSA public key (Info.plist SUPublicEDKey). Empty keeps
     # the updater off. housekit/scripts/sparkle-key.sh makes the pair.
-    SPARKLE_PUBLIC_ED_KEY: ""
+    SPARKLE_PUBLIC_ED_KEY: "/o/HQKg/RAag3Z5vQeNVtmzTEffUVRJMx4ONWMYc4pY="
     SWIFT_VERSION: "6.0"
     MACOSX_DEPLOYMENT_TARGET: "14.0"
     # Keychain keys its access grant to the code signature, so an ad-hoc build
